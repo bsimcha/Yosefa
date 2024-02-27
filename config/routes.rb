@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   #CATEGORY
   get "/categories" => "categories#index"
+  get "/categories/:id" => "categories#show"
 end

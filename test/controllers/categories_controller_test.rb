@@ -8,4 +8,12 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal Category.count, data.length
   end
+
+  test "show" do
+    get "/categories/#{Category.first.id}.json"
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal ["id", "name"], data.keys
+  end
 end
