@@ -8,4 +8,6 @@ class Painting < ApplicationRecord
   end
 
   has_many :carted_paintings
+  has_many :category_paintings
+  has_many :categories, through: :category_paintings
 end
