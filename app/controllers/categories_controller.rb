@@ -8,4 +8,11 @@ class CategoriesController < ApplicationController
     @category = Category.find_by(id: params[:id])
     render :show
   end
+
+  def create
+    @categories = Category.create(
+      name: params[:name],
+    )
+    render :show
+  end
 end
