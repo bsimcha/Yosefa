@@ -14,12 +14,12 @@ class PaintingsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "image", "description", "price"], data.keys
+    assert_equal ["id", "image", "description"], data.keys
   end
 
   test "create" do
     assert_difference "Painting.count", 1 do
-      post "/paintings.json", params: { image: "image", description: "pretty", price: 600 }
+      post "/paintings.json", params: { image: "image", description: "pretty" }
       assert_response 200
     end
   end
