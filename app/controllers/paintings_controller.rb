@@ -17,4 +17,10 @@ class PaintingsController < ApplicationController
     )
     render :show
   end
+
+  def destroy
+    @painting = Painting.find_by(id: params[:id])
+    @painintg.destroy
+    render json: { message: "Painting destroyed successfully" }
+  end
 end
