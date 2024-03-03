@@ -10,7 +10,7 @@ class PaintingsController < ApplicationController
   end
 
   def create
-    @paintings = Painting.create(
+    @painting = Painting.create(
       image: params[:image],
       description: params[:description],
       price: params[:price],
@@ -18,9 +18,19 @@ class PaintingsController < ApplicationController
     render :show
   end
 
+  def update
+    @painting = Painting.find_by(id: params[:id])
+    @painting.update(
+      image: params[:image] || @painting.image,
+      description: params[:description] || @painting.description,
+      price: params[:price] || @painting.price,
+    )
+    render :show
+  end
+
   def destroy
     @painting = Painting.find_by(id: params[:id])
-    @painintg.destroy
+    @painting.destroy
     render json: { message: "Painting destroyed successfully" }
   end
 end

@@ -16,4 +16,27 @@ class PaintingsControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal ["id", "image", "description", "price"], data.keys
   end
+
+  test "create" do
+    assert_difference "Painting.count", 1 do
+      post "/paintings.json", params: { image: "image", description: "pretty", price: 600 }
+      assert_response 200
+    end
+  end
+
+  test "update" do
+    painting = Painting.first
+    patch "/paintings/#{painting.id}.json", params: { image: "Updated image" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated image", data["image"]
+  end
+
+  test "destroy" do
+    assert_difference "Painting.count", -1 do
+      delete "/paintings/#{Painting.first.id}.json"
+      assert_response 200
+    end
+  end
 end

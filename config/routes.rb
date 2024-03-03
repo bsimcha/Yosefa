@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/paintings" => "paintings#index"
   get "/paintings/:id" => "paintings#show"
   post "/paintings" => "paintings#create"
+  patch "/paintings/:id" => "paintings#update"
   delete "/paintings/:id" => "paintings#destroy"
 
   #CATEGORY
