@@ -3,9 +3,7 @@
 one:
   image: MyString
   description: MyString
-  price: 1
 
 two:
   image: MyString
   description: MyString
-  price: 1
