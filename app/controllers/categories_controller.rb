@@ -1,4 +1,11 @@
 class CategoriesController < ApplicationController
+  def create
+    @category = Category.create(
+      name: params[:name],
+    )
+    render :show
+  end
+
   def index
     @categories = Category.all
     render :index
@@ -9,10 +16,9 @@ class CategoriesController < ApplicationController
     render :show
   end
 
-  def create
-    @categories = Category.create(
-      name: params[:name],
-    )
-    render :show
+  def destroy
+    @category = Category.find_by(id: params[:id])
+    @category.destroy
+    render json: { message: "Category destroyed successfully" }
   end
 end
