@@ -15,4 +15,5 @@ class CategoryPaintingsController < ApplicationController
     @category_paintings = CategoryPainting.all
     render :index
   end
+
 end

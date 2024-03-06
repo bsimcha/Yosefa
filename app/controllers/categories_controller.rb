@@ -15,4 +15,10 @@ class CategoriesController < ApplicationController
     @category = Category.find_by(id: params[:id])
     render :show
   end
+
+  def destroy
+    @category = Category.find_by(id: params[:id])
+    @category.destroy
+    render json: { message: "Category destroyed successfully" }
+  end
 end
