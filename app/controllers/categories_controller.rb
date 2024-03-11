@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def create
     @category = Category.create(
       name: params[:name],
