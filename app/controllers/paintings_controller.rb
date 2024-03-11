@@ -1,4 +1,6 @@
 class PaintingsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @paintings = Painting.all
     render :index

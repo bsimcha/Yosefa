@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   post "/category_paintings" => "category_paintings#create"
 
   #USERS
+  get "/users" => "users#index"
+  get "/users/:id" => "users#show"
   post "/users" => "users#create"
+  patch "/users/:id" => "users#update"
 
   #SESSIONS
   post "/sessions" => "sessions#create"
