@@ -25,4 +25,11 @@ Rails.application.routes.draw do
 
   #SESSIONS
   post "/sessions" => "sessions#create"
+
+  #IMAGES
+  get "/images" => "images#index"
+  get "/images/:id" => "images#show"
+  post "/images/" => "images#create"
+  patch "/images/:id" => "images#update"
+  delete "/images/:id" => "images#destroy"
 end
