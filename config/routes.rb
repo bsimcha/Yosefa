@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/categories" => "categories#index"
   get "/categories/:id" => "categories#show"
   post "/categories" => "categories#create"
+  patch "/categories/:id" => "categories#update"
   delete "/categories/:id" => "categories#destroy"
 
   #CATEGORY_PAINTING
