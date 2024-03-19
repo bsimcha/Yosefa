@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   #IMAGES
   get "/images" => "images#index"
   get "/images/:id" => "images#show"
-  post "/images/" => "images#create"
+  post "/images" => "images#create"
   patch "/images/:id" => "images#update"
   delete "/images/:id" => "images#destroy"
 end
