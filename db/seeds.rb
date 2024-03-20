@@ -5,4 +5,6 @@
 # Category.create(name: "Custom Commissioned Orders")
 # Category.create(name: "Waterdale Collab Originals")
 
-Image.create(url: "app/assets/images/kever-rochel.jpg", painting_id: 1)
+# Image.create(url: "app/assets/images/kever-rochel.jpg", painting_id: 1)
+Image.create(url: "kever-rochel.jpg", painting_id: 1)
+# Image.create(url: "https://i.pinimg.com/736x/cb/c6/62/cbc662299bd35357e519fe867444b86c.jpg", painting_id: 1)

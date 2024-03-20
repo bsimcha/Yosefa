@@ -34,4 +34,8 @@ class ImagesController < ApplicationController
     image.destroy
     render json: { message: "Image successfully deleted" }
   end
+
+  def image_params
+    params.permit(:url, :painting_id)
+  end
 end

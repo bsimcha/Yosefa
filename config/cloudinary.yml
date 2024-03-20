@@ -1,0 +1,12 @@
+development:
+  cloud_name: dqbxtl2b9
+  api_key: 187817774693884
+  api_secret: FJZNezwl0Ad4MVX7ZbNz-4wm4cc
+production:
+  cloud_name: dqbxtl2b9
+  api_key: 187817774693884
+  api_secret: FJZNezwl0Ad4MVX7ZbNz-4wm4cc
+test:
+  cloud_name: dqbxtl2b9
+  api_key: 187817774693884
+  api_secret: FJZNezwl0Ad4MVX7ZbNz-4wm4cc
