@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/categories" => "categories#index"
   get "/categories/:id" => "categories#show"
   post "/categories" => "categories#create"
+  patch "/categories/:id" => "categories#update"
   delete "/categories/:id" => "categories#destroy"
 
   #CATEGORY_PAINTING
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
   #IMAGES
   get "/images" => "images#index"
   get "/images/:id" => "images#show"
-  post "/images/" => "images#create"
+  post "/images" => "images#create"
   patch "/images/:id" => "images#update"
   delete "/images/:id" => "images#destroy"
 end
