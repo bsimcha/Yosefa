@@ -4,6 +4,11 @@
 # Category.create(name: "Semi-Originals")
 # Category.create(name: "Custom Commissioned Orders")
 # Category.create(name: "Waterdale Collab Originals")
+
+# Image.create(url: "app/assets/images/kever-rochel.jpg", painting_id: 1)
+# Image.create(url: "kever-rochel.jpg", painting_id: 1)
+# Image.create(url: "https://i.pinimg.com/736x/cb/c6/62/cbc662299bd35357e519fe867444b86c.jpg", painting_id: 1)
+
 # Painting.create(image: "71846e0d-e777-4aa8-9f38-a338a9414c68.jpeg", description: "Kosel Blue")
 # Painting.create(image: "PHOTO-2024-03-03-16-46-47.jpg", description: "Blue People")
 # Painting.create(image: "PHOTO-2024-03-03-16-46-47.jpg", description: " Bais Hamikdash and Yerushalayim")

@@ -10,10 +10,23 @@ class PaintingsController < ApplicationController
   end
 
   def create
+    pp params
     @painting = Painting.create(
       description: params[:description],
     )
-    render :show
+    if @painting.valid?
+      if params[:uploads] && params[:uploads] != "null"
+        response = Cloudinary::Uploader.upload(params["uploads"], resource_type: :auto)
+        image_url = response["secure_url"]
+        @image = Image.create(
+          url: image_url,
+          painting_id: @painting.id,
+        )
+      end
+      render :show
+    else
+      render json: { errors: @painting.errors.full_messages }, status: 422
+    end
   end
 
   # def create
