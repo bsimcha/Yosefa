@@ -30,6 +30,13 @@ class PaintingsController < ApplicationController
   end
 
   # def create
+  #   @painting = Painting.create(
+  #     description: params[:description],
+  #   )
+  #   render :show
+  # end
+
+  # def create
   #   if params[:url1].blank?
   #     render json: { errors: ["At least one image is required."] }, status: :unprocessable_entity
   #     return
