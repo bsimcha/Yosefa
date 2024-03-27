@@ -16,3 +16,4 @@
 # Painting.create(image: "https://drive.google.com/file/d/1YyP7cwoUXknVR-4_FTVdlipLne4j2tid/view?ts=65dd374d", description: "Kever Rochel purple")
 # Painting.create(image: "Kosel green 48x60 copy.jpg", description: "Kosel green")
 # Painting.create(image: "https://drive.google.com/file/d/1avJv8qTJXSx-JfsGwy-MRQbjLObiUURM/view?ts=65dd374d", description: "Kosel")
+User.create(name: "adina", email: "adina@example.com", password: "password", password_confirmation: "password")
