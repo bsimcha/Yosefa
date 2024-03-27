@@ -17,4 +17,6 @@
 # Painting.create(image: "Kosel green 48x60 copy.jpg", description: "Kosel green")
 # Painting.create(image: "https://drive.google.com/file/d/1avJv8qTJXSx-JfsGwy-MRQbjLObiUURM/view?ts=65dd374d", description: "Kosel")
 
+
 User.create(name: "Yosefa", email: "yosefabruzoart@gmail.com", password: "yosefamakeup1", password_confirmation: "yosefamakeup1", admin: true)
+
